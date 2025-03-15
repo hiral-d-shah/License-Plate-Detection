@@ -62,7 +62,7 @@ You can deploy this app on **Streamlit Cloud** or **Hugging Face Spaces**:
 1. **Fork & Push to GitHub**
 2. **Deploy via Streamlit Sharing / Hugging Face Spaces**
 
-[![Deploy on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-md.svg)]([your-huggingface-link](https://huggingface.co/spaces/HiralShah62/License-Plate-Detection-System))
+[![Deploy on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/deploy-on-spaces-md.svg)](https://huggingface.co/spaces/HiralShah62/License-Plate-Detection-System)
 
 ---
 
