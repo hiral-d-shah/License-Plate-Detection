@@ -34,7 +34,13 @@ def detect_license_plate(image):
 			scale=2
 			height, width = plate.shape[:2]
 			plate = cv2.resize(plate, (width * scale, height * scale), interpolation=cv2.INTER_CUBIC)
-			
+			lab = cv2.cvtColor(plate, cv2.COLOR_RGB2LAB)
+			l, a, b = cv2.split(lab)
+			clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+			l = clahe.apply(l)
+			plate = cv2.merge((l, a, b))
+			plate = cv2.cvtColor(plate, cv2.COLOR_LAB2RGB)
+		
 			text = reader.readtext(plate, detail=0, allowlist="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-")
 			text = " ".join(text).upper()
 			
