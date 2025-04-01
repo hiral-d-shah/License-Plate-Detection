@@ -40,7 +40,7 @@ def detect_license_plate(image):
 			l = clahe.apply(l)
 			plate = cv2.merge((l, a, b))
 			plate = cv2.cvtColor(plate, cv2.COLOR_LAB2RGB)
-		
+			
 			text = reader.readtext(plate, detail=0, allowlist="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-")
 			text = " ".join(text).upper()
 			
